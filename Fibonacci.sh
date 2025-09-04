@@ -12,7 +12,7 @@ function generate_fibonacci() {
         echo -n "$a "
         fn=$((a + b))
         a=$b
-        b=$fn_typo  # <-- Intentional error: undefined variable 'fn_typo'
+        b=$fn  # <-- Intentional error: undefined variable 'fn_typo'
     done
     echo
 }
