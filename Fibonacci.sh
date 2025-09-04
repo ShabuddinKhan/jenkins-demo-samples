@@ -14,7 +14,7 @@ function generate_fibonacci() {
         echo -n "$a "
         fn=$((a + b))
         a=$b
-    b=$fn
+    b=$fn_typo
     done
     echo
 }
