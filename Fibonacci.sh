@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail  # Exit immediately on error, undefined variable, or failed pipeline
+
 # Function to generate Fibonacci series
 function generate_fibonacci() {
     local n=$1
