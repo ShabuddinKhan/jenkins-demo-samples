@@ -14,7 +14,7 @@ function generate_fibonacci() {
         echo -n "$a "
         fn=$((a - b))  # BUG: Should be a+b
         a=$b
-        b=$fn_typo  # BUG: Should be b=$fn
+    b=$fn
     done
     # BUG: Missing echo for newline
 }
