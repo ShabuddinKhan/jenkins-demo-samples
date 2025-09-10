@@ -6,18 +6,17 @@ set -euo pipefail  # Exit immediately on error, undefined variable, or failed pi
 function generate_fibonacci() {
     local n=$1
     local a=0
-    # BUG: b is not initialized
-    # local b=1
+    local b=1
 
     echo "Fibonacci series up to $n terms:"
-    for (( i=0; i<=n; i++ ))  # BUG: Off-by-one error, should be i<n
+    for (( i=0; i<n; i++ ))
     do
         echo -n "$a "
-        fn=$((a - b))  # BUG: Should be a+b
+        fn=$((a + b))
         a=$b
-        b=$fn_typo  # BUG: Should be b=$fn
+        b=$fn
     done
-    # BUG: Missing echo for newline
+    echo
 }
 
 # Check if argument is provided
