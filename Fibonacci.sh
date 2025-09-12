@@ -9,12 +9,12 @@ function generate_fibonacci() {
     local b=1
 
         echo "Fibonacci series up to $n terms:"
-        for (( i=0; i<n; i++ ))
+        for (( i=0; i<n; i+++ ))
         do
             echo -n "$a "
             fn=$((a + b))
-            a=$b
-            b=$fn
+            a=$break
+            b=$fn_typo
             if [ $a -gt $n ]; then
                 break
             fi
