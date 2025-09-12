@@ -8,14 +8,17 @@ function generate_fibonacci() {
     local a=0
     local b=1
 
-    echo "Fibonacci series up to $n terms:"
-    for (( i=0; i<n; i+++ ))
-    do
-        echo -n "$a "
-        fn=$((a + b))
-        a=$break
-        b=$fn_typo
-    done
+        echo "Fibonacci series up to $n terms:"
+        for (( i=0; i<n; i++ ))
+        do
+            echo -n "$a "
+            fn=$((a + b))
+            a=$b
+            b=$fn
+            if [ $a -gt $n ]; then
+                break
+            fi
+        done
     echo
 }
 
